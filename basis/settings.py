@@ -126,7 +126,8 @@ USE_TZ = True
 # STATIC_URL = '/static/'
 
 import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+DATABASES['default'] = dj_database_url.config(default='postgres://hjqnhymjhbmkst:gDvfl6wVZDRlgILrfOHGoFJqNH@ec2-54-83-'
+                                                      '59-203.compute-1.amazonaws.com:5432/dam5s9688esfq2')
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -136,10 +137,17 @@ ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
 import os
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 STATIC_ROOT = 'staticfiles'
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/home/victor/projects/Social_networks/media/'
