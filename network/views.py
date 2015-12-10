@@ -5,4 +5,20 @@ from django.shortcuts import render, render_to_response
 
 
 def index(request):
-    return render(request, "index.html")
+    return render_to_response("index.html")
+
+
+def groups(request):
+    return render_to_response('groups.html')
+
+
+def members(request):
+    return render_to_response('members.html')
+
+
+def photos(request):
+    return render_to_response('photos.html')
+
+
+def profile(request):
+    return render_to_response('profile.html')
