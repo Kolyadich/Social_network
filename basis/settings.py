@@ -123,8 +123,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-# STATIC_URL = '/static/'
-
 import dj_database_url
 DATABASES['default'] = dj_database_url.config(default='postgres://hjqnhymjhbmkst:gDvfl6wVZDRlgILrfOHGoFJqNH@ec2-54-83-'
                                                       '59-203.compute-1.amazonaws.com:5432/dam5s9688esfq2')
@@ -138,16 +136,15 @@ ALLOWED_HOSTS = ['*']
 # Static asset configuration
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-STATIC_ROOT = 'staticfiles'
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATICFILES_DIRS = [
+    '/home/victor/projects/social_network/static'
+]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL = '/home/victor/projects/Social_networks/media/'
+MEDIA_URL = '/media/'

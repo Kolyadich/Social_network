@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
+{% load static %}
 
 
 <body>
@@ -37,11 +37,6 @@
                            data-title="Image Five" data-footer="This is image five" data-toggle="lightbox"
                            data-hover="tooltip" data-placement="top" title="Image Five">
                         <img src="{% static 'img/sample5.jpg' %}" class="img-thumbnail"/>
-                    </a></li>
-                    <li><a href="{% static 'img/sample6.jpg' %}" data-parent=".gallery-parent" data-gallery="my-gallery"
-                           data-title="Image Six" data-footer="This is image six" data-toggle="lightbox"
-                           data-hover="tooltip" data-placement="top" title="Image Six">
-                        <img src="{% static 'img/sample6.jpg' %}" class="img-thumbnail"/>
                     </a></li>
                 </ul>
             </div>
