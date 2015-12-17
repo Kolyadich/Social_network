@@ -138,8 +138,9 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 STATIC_URL = '/static/'
+
+STATIC_ROOT = 'staticfiles'
 
 STATICFILES_DIRS = [
     '/home/victor/projects/social_network/static'
